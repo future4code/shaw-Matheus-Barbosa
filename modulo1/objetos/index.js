@@ -103,7 +103,7 @@ console.log(carrinho)
 
 */
 
-/*
+
 //Desafio1
 
 function usuario(){
@@ -123,7 +123,7 @@ const usuario1 = usuario()
 
 console.log(typeof usuario1)
 console.log(usuario1)
-*/
+
 
 /*
 //desafio 2
@@ -154,7 +154,7 @@ console.log(anoFilmes[1])
 
 */
 
-/*
+/* 
 //desafio 3
 let carrinho = []
 
