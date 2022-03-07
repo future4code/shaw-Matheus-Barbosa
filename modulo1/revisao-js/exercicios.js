@@ -40,7 +40,11 @@ function retornaNumerosPares(array) {
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
- 
+    return array.filter((elemento) => {
+        return (elemento % 2) === 0
+     }).map((elemento) => {
+         return Math.pow(elemento,2)
+     })
 }
 
 // EXERCÍCIO 06 
