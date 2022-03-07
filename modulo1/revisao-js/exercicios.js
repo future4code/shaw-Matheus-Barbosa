@@ -19,12 +19,23 @@ function retornaArrayInvertido(array) {
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-  
+  return array.sort((a,b) =>{
+      if (a > b) {
+          return 1
+      }
+      if (a < b){
+          return -1
+      }
+      return 0
+  })
 }
 
 // EXERCÍCIO 04
+
 function retornaNumerosPares(array) {
-  
+ // return array.filter((elemento) => {
+   //   return (elemento % 2) === 0
+  //})
 }
 
 // EXERCÍCIO 05
@@ -32,7 +43,7 @@ function retornaNumerosParesElevadosADois(array) {
  
 }
 
-// EXERCÍCIO 06
+// EXERCÍCIO 06 
 function retornaMaiorNumero(array) {
   
 }
