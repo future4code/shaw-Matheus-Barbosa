@@ -158,7 +158,22 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
+    return contas.map((elemento)=>{
+        let saldo
+        for(i=0; i<= elemento.compras.length(); i++){
+             {
+               saldo = elemento.saldoTotal = elemento.saldoTotal - elemento.compras           
 
+            }
+            return {
+                ...contas,
+                saldoTotal: saldo,
+                compras: []
+            }
+            
+        }       
+        
+    })
 }
 
 // EXERCÍCIO 15A
