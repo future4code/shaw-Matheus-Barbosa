@@ -136,12 +136,17 @@ function retornaChamadaDeFilme(filme) {
 
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
-   
+   return {
+       ...pessoa,
+       nome:"ANÔNIMO"
+   }
 }
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
-   
+  // return pessoas.filter((elemento)=>{
+    //    return elemento.altura >= 1.5 && elemento.idade > 14 && elemento.idade < 60
+ //  })
 }
 
 // EXERCÍCIO 13B
