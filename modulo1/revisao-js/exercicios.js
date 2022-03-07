@@ -33,9 +33,9 @@ function retornaArrayOrdenado(array) {
 // EXERCÍCIO 04
 
 function retornaNumerosPares(array) {
- // return array.filter((elemento) => {
-   //   return (elemento % 2) === 0
-  //})
+  return array.filter((elemento) => {
+     return (elemento % 2) === 0
+  })
 }
 
 // EXERCÍCIO 05
