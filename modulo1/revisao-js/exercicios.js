@@ -178,10 +178,28 @@ function retornaContasComSaldoAtualizado(contas) {
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
-  
+   return consultas.sort((a,b)=>{
+       if (a.nome > b.nome){
+           return 1
+       }
+       if (a.nome < b.nome){
+           return -1
+       }else{
+           return 0
+       }
+   })
 }
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-   
+    return consultas.sort((a,b)=>{
+        if (a.dataDaConsulta.getTime() > b.dataDaConsulta.getTime()){
+            return 1
+        }
+        if (a.dataDaConsulta.getTime() < b.dataDaConsulta.getTime()){
+            return -1
+        }else{
+            return 0
+        }
+    })
 }
