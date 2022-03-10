@@ -1,0 +1,42 @@
+header{
+    background-color: black;
+    color: yellow;
+    text-align: center;
+}
+
+.menu{
+    background-color: yellow;
+    color: black;
+}
+
+.botao{
+    margin: 0 5%;
+}
+
+footer{
+    background-color: black;
+    color: yellow;
+    text-align:center;
+    
+}
+.titulo-index{
+    text-align: center;
+}
+.img-index{
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+}
+.estoque-titulo{
+    text-align: center;
+}
+
+table{
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+li{
+    margin-top: 10px;
+}
