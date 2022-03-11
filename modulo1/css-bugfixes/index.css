@@ -119,9 +119,11 @@ td button:hover{
 }
 
 .container-do-search {
-    margin-top: 20px;
+    
     height: 100px;
+    margin:0 0 50px 0;
 }
+
 
 
 #back-button {
