@@ -58,7 +58,8 @@ div img {
 }
 
 .icone {
-    height: 15px;
+    height:30px;
+    width: 30px;
 }
 
 
@@ -135,5 +136,5 @@ td button {
 
 }
 .img-tabela-compras{
-    width: 50PX;
+    width: 50px;
 }
