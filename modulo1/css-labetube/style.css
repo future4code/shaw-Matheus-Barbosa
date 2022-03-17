@@ -13,6 +13,9 @@ header{
     height: 7em;
     width: 100%;
 }
+.busca{
+    margin-right: 2em;
+}
 
 main{
     display: flex;
@@ -38,8 +41,7 @@ footer{
     column-gap: 0.5em;
     padding: 2em;
     
-    
-    
+ 
 }
 
 .item-videos{
@@ -47,9 +49,7 @@ footer{
     border-style:solid;
     border-color: green;
     flex-direction: column;
-    height: 20em;  
-
-       
+    height: 20rem;       
 }
 .link-video{
   width: 17em;
@@ -69,7 +69,7 @@ footer{
     height:55em;
     align-items: center;
     justify-content: space-between;
-
+    
     
 }
 
@@ -83,4 +83,40 @@ footer{
 .video-execucao{
     width: 70em;
     height: 50em;
+}
+
+@media screen and (max-device-width:800px){
+    .videos{
+        display: flex;
+        padding: 2em;
+        flex-direction: column;
+        align-items: center;
+        
+       
+    }
+
+    header{
+        display: flex;
+        align-items: center;
+        width: auto;
+        
+    }
+    .busca{
+        width: 8rem;
+        
+
+    }
+  
+    footer{
+        display: flex;
+        width: 100%;
+    }
+    .video-exec{
+        justify-content: center;
+    }
+    .video-execucao{
+        width: 40rem;
+        height: 40rem;
+
+    }
 }
