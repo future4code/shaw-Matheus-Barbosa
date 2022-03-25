@@ -43,11 +43,11 @@ export class SecaoCompartilhar extends Component {
 	render() {
 		return <CommentContainer>
             <RedesSociais>
-            <img src='https://imagepng.org/wp-content/uploads/2017/09/facebook-icone-icon.png' onClick = {this.props.aoEnviar} name={facebook}/>
+            <img src='https://imagepng.org/wp-content/uploads/2017/09/facebook-icone-icon.png' onClick = {this.props.aoEnviar} name='facebook'/>
             <img src='https://imagepng.org/wp-content/uploads/2018/08/twitter-icone.png' 
-            onClick = {this.props.aoEnviar} name={twitter}/>
+            onClick = {this.props.aoEnviar} name='twitter'/>
             <img src='https://imagepng.org/wp-content/uploads/2017/08/instagram-icone-icon.png'
-            onClick = {this.props.aoEnviar} name={instagram}/>
+            onClick = {this.props.aoEnviar} name='instagram'/>
             </RedesSociais>
             <DivInput>
 			<InputComentario
