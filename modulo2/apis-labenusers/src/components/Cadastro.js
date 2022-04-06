@@ -28,9 +28,7 @@ export default class Cadastro extends React.Component{
             name: this.state.nome,
             email:this.state.email
         }
-        // const headers = {
-        //     Authorization : "matheus-lima-shaw"
-        // }
+       
 
         axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",body,{
             headers :{
@@ -38,9 +36,11 @@ export default class Cadastro extends React.Component{
             }
         }).then((resposta) =>{
             alert("Cadastro enviado")
+            
         }).catch((error) => {
             alert("Erro")
         })
+        this.setState({nome:"",email:""})
     }
 
     render(){
