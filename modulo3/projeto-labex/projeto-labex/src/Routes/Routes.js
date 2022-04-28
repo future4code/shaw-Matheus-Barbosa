@@ -9,18 +9,19 @@ import LoginPage from "../Pages/LoginPage";
 import TripDetailsPage from "../Pages/TripDetailsPage";
 
 
+
 function Telas (){
 
     return(
         <BrowserRouter>
             <Routes>
                 <Route index element={<HomePage/>}/>
-                <Route path="adminPage" element={<AdminHomePage/>}/>
-                <Route path="applicationPage" element={<ApplicationFormPage/>}/>
-                <Route path="createTrip" element={<CreateTripPage/>}/>
-                <Route path="listTrips" element={<ListTripsPage/>}/>
-                <Route path="login" element={<LoginPage/>}/>
-                <Route path="tripDetails" element={<TripDetailsPage/>}/>
+                <Route path='adminPage' element={<AdminHomePage/>}/>
+                <Route path='applicationPage' element={<ApplicationFormPage/>}/>
+                <Route path='createTrip' element={<CreateTripPage/>}/>
+                <Route path='listTrips' element={<ListTripsPage/>}/>
+                <Route path='login' element={<LoginPage/>}/>
+                <Route path='tripDetails' element={<TripDetailsPage/>}/>
             </Routes>
         </BrowserRouter>
     )

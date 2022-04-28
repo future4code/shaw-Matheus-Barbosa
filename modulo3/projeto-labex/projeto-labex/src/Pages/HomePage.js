@@ -1,7 +1,7 @@
 import React from "react";
 import {useNavigate} from 'react-router-dom'
-import {goBack,goToPage} from '../Routes/Coordinator'
-
+import {goToPage} from '../Routes/Coordinator'
+import{listTrips,loginPage} from '../Constants/constantes'
 
 
 function HomePage (){
@@ -12,10 +12,10 @@ function HomePage (){
         <>
         <h1>Esta é a Pagina de Login</h1>
         <button
-        onClick={()=>goToPage(navigate,"listTrips")}
+        onClick={()=>goToPage(navigate,listTrips)}
         >Lista De Viagens</button>
         <button
-        onClick={()=> goToPage(navigate,"login")}
+        onClick={()=> goToPage(navigate,loginPage)}
         >Login</button>
         </>
     )
