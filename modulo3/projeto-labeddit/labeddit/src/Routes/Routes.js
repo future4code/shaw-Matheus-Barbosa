@@ -14,7 +14,7 @@ function Telas (){
             <Routes>
                 <Route index element={<PaginaLogin/>}/>
                 <Route path='Feed' element={<FeedPage/>}/>
-                <Route path='CreateLogin' elemnent={<CreateLoginPage/>}/>
+                <Route path='CreateLogin' element={<CreateLoginPage/>}/>
                 
             </Routes>
         </BrowserRouter>
