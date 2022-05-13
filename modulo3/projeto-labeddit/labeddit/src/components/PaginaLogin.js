@@ -4,6 +4,7 @@ import axios from "axios";
 import { base } from "../constants/BASE_URL";
 import { useNavigate } from "react-router-dom";
 import { goToPage } from "../Routes/Coordinator";
+import useSenha from "./useSenha";
 
 
 const Pagina = styled.div`
@@ -61,13 +62,17 @@ function PaginaLogin(){
         }
 
         axios.post(`${base}/users/login`,body).then((res)=>{
-            console.log(res)
+            localStorage.setItem("token",res.data.token)
+            goToPage(navigate,'feed')
+
         }).catch((err)=>{
-            console.log("deu erro")
+            alert(err.response.data)
         })
+
 
     }
 
+    
     
 
     return(
@@ -92,7 +97,12 @@ function PaginaLogin(){
            
            <button 
            className="cadastro"
-           onClick={()=>goToPage(navigate,'CreateLogin')}
+           onClick={
+            
+            ()=>goToPage(navigate,'CreateLogin')
+            
+            
+        }
            >Cadastrar</button>
         </Pagina>
     )

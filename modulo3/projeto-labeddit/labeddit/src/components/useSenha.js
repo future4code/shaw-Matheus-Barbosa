@@ -1,9 +1,9 @@
 import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import { goToPage } from "../../Routes/Coordinator"
+import{goToHome,goToPage} from '../Routes/Coordinator'
 
 
- function useSenhaProtegida (pagina){
+ function useSenha (){
 
     const navigate = useNavigate()
     const token = localStorage.getItem("token")
@@ -12,12 +12,10 @@ import { goToPage } from "../../Routes/Coordinator"
 
     useEffect(()=>{
         if(token === null){
-            goToPage(navigate,loginPage)
-        }else if (pagina === true){
-            goToPage(navigate,adminPage)
+            goToHome(navigate)
         }
     },[navigate])
 
 }
 
-export default useSenhaProtegida
+export default useSenha
