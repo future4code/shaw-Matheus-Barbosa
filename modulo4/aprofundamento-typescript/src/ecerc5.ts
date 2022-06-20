@@ -1,0 +1,1 @@
+// O arquivo gerado pelo comando contem todas as configurações possíveis para o arquivo tsconfig, ja o arquivo disponilizado para iniciarmos o projeto, contem somente as configurações necessárias para o uso neste momento.
