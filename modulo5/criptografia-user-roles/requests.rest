@@ -1,0 +1,23 @@
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+    "email": "labenuser@hotmail.com",
+    "password": "12345678"
+}
+
+###
+
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+    "email": "labenuser@hotmail.com",
+    "password": "12345678"
+}
+
+###
+
+# GET http://localhost:3003/user/profile
+# Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQzY2FjZDRlLTNkMDItNDUwYS04MWU4LTNlZTQyMmVhMGJiMiIsImlhdCI6MTY1NjU2ODU5NiwiZXhwIjoxNjU2NTcwMzk2fQ.-01P9oVdTsPXHFhqo7_bxSapYNznr1BtLLcnY8E8zUw
+# Content-Type: application/json
