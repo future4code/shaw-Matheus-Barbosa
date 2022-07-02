@@ -1,0 +1,61 @@
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+    "cpf": "134.677.667-73",
+    "name": "matheus lima barbosa",
+    "email": "matheus-lb@hotmail.com",
+    "password":"123456",
+    "role": "admin"
+}
+
+###
+
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+    "cpf": "134.677.667-83",
+    "password":"123456"
+}
+
+###
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVhOGJmOTcxLTMxMjQtNGIzMy1iY2ZjLWY0NjUwNGVhMjNiMCIsImlhdCI6MTY1Njc0NDU5MSwiZXhwIjoxNjU2ODMwOTkxfQ._s80rGi6vUWbEnz0o9a3cx86YQRnqZC8x7i-tEhlbXw
+
+GET http://localhost:3003/user/myProfile
+Authorization: {{token}}
+Content-Type: application/json
+
+###
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVhOGJmOTcxLTMxMjQtNGIzMy1iY2ZjLWY0NjUwNGVhMjNiMCIsImlhdCI6MTY1Njc0NDU5MSwiZXhwIjoxNjU2ODMwOTkxfQ._s80rGi6vUWbEnz0o9a3cx86YQRnqZC8x7i-tEhlbXw
+@id = 34d52e43-fb9a-4520-ba66-0d7939913a38
+
+
+GET http://localhost:3003/user/:id
+Authorization: {{token}}
+Content-Type: application/json
+
+###
+
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVhOGJmOTcxLTMxMjQtNGIzMy1iY2ZjLWY0NjUwNGVhMjNiMCIsImlhdCI6MTY1Njc0NDU5MSwiZXhwIjoxNjU2ODMwOTkxfQ._s80rGi6vUWbEnz0o9a3cx86YQRnqZC8x7i-tEhlbXw
+
+POST http://localhost:3003/user/createRecipe
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+    "name": "pudim de leite",
+    "makings": "2 latas de leite condensado , 4 ovos , açucar,agua",
+    "description": "derreta o açucar, coloque um copo grande de agua e deixe engrossa até virar uma calda, bata no liquidificador o leite condensado e os ovos passados por uma peneira, coloque em uma forma e deixe assar 40 minutos em banho maria "
+}
+
+###
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVhOGJmOTcxLTMxMjQtNGIzMy1iY2ZjLWY0NjUwNGVhMjNiMCIsImlhdCI6MTY1Njc1MDE2OSwiZXhwIjoxNjU2ODM2NTY5fQ.b-RxusM9A6j8E81EVef4g3Pt_nOZA1HSE_yY4wnDQMg
+
+GET http://localhost:3003/getAllRecipes
+Authorization: {{token}}
+Content-Type: application/json
+
