@@ -54,7 +54,7 @@ export class Recipes extends BaseDatabase{
         await this.connection.raw(`
             UPDATE Recipes_cookenu SET
             name = '${name}' , makings = '${makings}' , description = '${description}'
-            WHERE id = '${id}' AND idCreator = '${idCreator}'
+            WHERE id = ${id}
         `)
     }
     

@@ -54,53 +54,58 @@ export class User extends TokenAndHash{
 
     protected async deleteUser (id:string) : Promise<void>{
         await this.connection.raw(`
-            DELETE * FROM Users_cookenu
+            DELETE FROM Users_cookenu
             WHERE id = '${id}'
         `)
     }
 
-    protected async followUser (idFollower : string , idFollow : string) : Promise<void>{
-        const verify = this.isfollow(idFollower,idFollow)
-        if (!verify){
+    async getUserbytoken(token:any): Promise<any>{
+        let data = undefined
+        data = this.verifyToken(token)
+        return data
+    }
+
+    async followUser (idFollower : string , iFollow : any) : Promise<void>{
+       
         await this.connection.raw(`
             INSERT INTO Follows_cookenu (idFollower,idFollow)
-            VALUES ('${idFollower}','${idFollow}')
+        
+            VALUES ('${idFollower}','${iFollow}')
         `)
-        }
+        
     }
 
     async getFollows (id:string) : Promise<any>{
+        
         const result = await this.connection.raw(`
             SELECT * FROM Follows_cookenu
             WHERE idFollower = '${id}'
         `)
+
+        return result[0]
     }
 
-    protected async unfollow (idFollower : string , idFollow : string) : Promise<void>{
-        const verify = this.isfollow(idFollower,idFollow)
-        if(!verify){
+    async unfollow (idFollower : string , iFollow : any) : Promise<void>{
+
         await this.connection.raw(`
-            DELETE * FROM Follows_cookenu
-            WHERE idFollower = '${idFollower}' AND idFollow = '${idFollow}'
+        DELETE FROM Follows_cookenu
+        WHERE idFollower = '${idFollower}' AND idFollow = '${iFollow}';
         `)
-        }
+        
     }
 
-    async isfollow (idFollower : string , idFollow : string) : Promise<boolean>{
+    async isfollow (idFollower : string , idFollow : any) : Promise<any>{
 
-        const result = await this.connection.raw(`
-            SELECT * FROM Follows_cookenu
+        const result  = await this.connection.raw(`
+            SELECT idFollow FROM Follows_cookenu
             WHERE idFollower = '${idFollower}' AND idFollow = '${idFollow}'
         `)
-
-        if (result === {}){
-            return false
-        }else{
-            return true
-        }
+        return result[0]
+        
     }
 
 
+ 
 
 
 }
