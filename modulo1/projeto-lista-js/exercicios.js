@@ -17,95 +17,75 @@ function imprimeMensagem() {
 // EXERCÍCIOS PARA FAZER ------------------------------------------------------------------
 
 // EXERCÍCIO 01
-function calculaAreaRetangulo(altura,largura) {
-  let area (altura*largura);
-  console.log(area);
+function calculaAreaRetangulo() {
+  // implemente sua lógica aqui
+
 }
 
 // EXERCÍCIO 02
 function imprimeIdade() {
-  const anoAtual = prompt("Em que ano estamos?");
-  const dataNascimento = prompt("qual sua data de nascimento");
-  let idade = anoAtual - dataNascimento;
-  console.log(idade);
+  // implemente sua lógica aqui
 
 }
 
 // EXERCÍCIO 03
 function calculaIMC(peso, altura) {
-  const imc = peso/(altura*altura);
-  return imc;
+  // implemente sua lógica aqui
 
 }
 
 // EXERCÍCIO 04
 function imprimeInformacoesUsuario() {
-  const nome = prompt("qual seu nome?");
-  const idade = prompt("qual sua idade");
-  const email = prompt("qual e o seu email");
-  console.log("Meu nome é "+nome+", tenho "+idade+" anos,e o meu email é "+email+".");
-  
+  // implemente sua lógica aqui
+  // "Meu nome é NOME, tenho IDADE anos, e o meu email é EMAIL."
+
 }
 
 // EXERCÍCIO 05
 function imprimeTresCoresFavoritas() {
-  const cores = prompt("digite suas tres cores favoritas");
-  let array = cores.split(" ");
-  console.log(array);
-
+  // implemente sua lógica aqui
 
 }
 
 // EXERCÍCIO 06
 function retornaStringEmMaiuscula(string) {
-  return string.toUpperCase();
+  // implemente sua lógica aqui
 
 }
 
 // EXERCÍCIO 07
 function calculaIngressosEspetaculo(custo, valorIngresso) {
-  const custoPorIngresso = custo/valorIngresso;
-  return custoPorIngresso;
+  // implemente sua lógica aqui
 
 }
 
 // EXERCÍCIO 08
 function checaStringsMesmoTamanho(string1, string2) {
-  const tamanho1 = string1.lenght();
-  const tamanho2 = string2.length();
-  return tamanho1 === tamanho2;
+  // implemente sua lógica aqui
 
 }
 
 // EXERCÍCIO 09
 function retornaPrimeiroElemento(array) {
-  return array[0];
+  // implemente sua lógica aqui
 
 }
 
 // EXERCÍCIO 10
 function retornaUltimoElemento(array) {
-  const tamanho = array.lenght();
-  return array[tamanho];
+  // implemente sua lógica aqui
 
 }
 
 // EXERCÍCIO 11
 function trocaPrimeiroEUltimo(array) {
-  const primeiroElemento = 1;
-  const ultimoElemento = 2;
-  array[0] = primeiroElemento;
-  const tamanho = array.length();
-  array[tamanho] = ultimoElemento;
-  return array;
+  // implemente sua lógica aqui
 
 }
 
 // EXERCÍCIO 12
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
-    let string1 = string1.toLowerCase();
-    let string2 = string2.toLowerCase();
-    return string1 === string2;
+  // implemente sua lógica aqui
 
 }
 
