@@ -1,0 +1,39 @@
+POST http://localhost:3003/signup
+Content-Type: application/json
+
+{
+    "name":"jorge",
+    "email":"jorge22@email.com",
+    "password":"password"
+}
+###
+
+
+POST http://localhost:3003/login
+Content-Type: application/json
+
+{
+     "email" : "jorge22@email.com",
+     "password":"password"
+}
+
+###
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVhNTkxZTM4LWUwMzQtNDNmZS1hMTkzLWQ2MTdkN2JlNDYyOCIsImlhdCI6MTY1NzI1MzUzOSwiZXhwIjoxNjU3MzM5OTM5fQ.0qhNdL2hodJlu30vI-McwV9f2VEl96ubjdPCnAsERyA
+
+POST http://localhost:3003/user/createPost
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+    "photo":"www.sss.eee.ee",
+    "description":"foto do nada",
+    "type":"normal"
+}
+###
+
+GET http://localhost:3003/user/post/0fd1c923-cf29-453a-83be-e95b4a4ceafe
+Authorization: {{token}}
+Content-Type: application/json
+
+
+
