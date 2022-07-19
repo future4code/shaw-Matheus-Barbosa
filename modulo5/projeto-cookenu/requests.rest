@@ -1,0 +1,136 @@
+
+// Cria uma nova conta 
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+    "cpf": "",
+    "name": "",
+    "email": "",
+    "password":"",
+    "role": ""
+}
+
+###
+
+// Realiza login em uma conta criada
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+    "cpf": "",
+    "password":""
+}
+
+###
+
+
+// Variáveis para guardar o id e o token para os endopoints seguintes
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVhOGJmOTcxLTMxMjQtNGIzMy1iY2ZjLWY0NjUwNGVhMjNiMCIsImlhdCI6MTY1NjkxNDA1OCwiZXhwIjoxNjU3MDAwNDU4fQ.szeCuOQsUbr5eCZL03rLKGqJ_VhqU8XyOUPqOkk0uNk
+@id = 061d4fe9-ada7-4109-93a3-17a48805dbb2
+
+// Retorna o dados do usuário que está logado
+GET http://localhost:3003/user/myProfile
+Authorization: {{token}}
+Content-Type: application/json
+
+###
+
+
+// Retorna os dados de um usuário pelo seu id
+GET http://localhost:3003/user/:id
+Authorization: {{token}}
+Content-Type: application/json
+
+###
+
+// Cria uma nova receita na conta do usuário logado
+POST http://localhost:3003/user/createRecipe
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+    "name": "pudim de chocolate",
+    "makings": "2 latas de leite condensado , 4 ovos , açucar,agua,chocolate em po",
+    "description": "derreta o açucar, coloque um copo grande de agua e deixe engrossa até virar uma calda, bata no liquidificador o leite condensado e os ovos passados por uma peneira e o chocolate em po, coloque em uma forma e deixe assar 40 minutos em banho maria "
+}
+
+###
+
+// Retorna uma receita pelo seu Id
+GET http://localhost:3003/getRecipe/:id
+
+Authorization: {{token}}
+Content-Type: application/json
+
+###
+
+// Deleta uma receita pelo seu Id, deleta somente se esta receita for de um usuário logado
+DELETE  http://localhost:3003/user/recipes/:id
+Authorization: {{token}}
+Content-Type: application/json
+###
+
+// Edita a uma receita de um usuário logado
+POST http://localhost:3003/editRecipe/:id
+Authorization: {{token}}
+Content-Type: application/json
+
+{
+    "name": "pudim de chocolate",
+    "makings": "2 latas de leite condensado , 4 ovos , açucar,agua,chocolate em po",
+    "description": "derreta o açucar, coloque um copo grande de agua e deixe engrossa até virar uma calda, bata no liquidificador o leite condensado e os ovos passados por uma peneira e o chocolate em po, coloque em uma forma e deixe assar 40 minutos em banho maria "
+}
+
+###
+
+// Retorna todas as receitas cadastradas no banco de dados
+GET http://localhost:3003/getAllRecipes
+Authorization: {{token}}
+Content-Type: application/json
+###
+
+// Retorna todas as receitas de um usuário específico
+GET http://localhost:3003/getAllRecipes/:id
+Authorization: {{token}}
+Content-Type: application/json
+###
+
+// Encontra uma receita pelo nome recebido por query params
+GET http://localhost:3003/searchRecipe
+Authorization: {{token}}
+Content-Type: application/json
+###
+
+// Verifica se um usuário está seguindo outro e retorna seu id
+GET http://localhost:3003/user/isfollow/:id
+Authorization: {{token}}
+Content-Type: application/json
+
+###
+
+//Seguir usuário, informar o usuario no path params
+POST http://localhost:3003/user/follow/:id
+Authorization: {{token}}
+Content-Type: application/json
+
+###
+
+//deixar de seguir um usuário
+POST http://localhost:3003/user/unfollow/:id
+Authorization: {{token}}
+Content-Type: application/json
+
+###
+
+// retorna quem segue o usuario
+GET http://localhost:3003/user/getfollows
+Authorization: {{token}}
+Content-Type: application/json
+
+###
+
+// retorna quem o usuario esta seguindo
+GET http://localhost:3003/user/follows
+Authorization: {{token}}
+Content-Type: application/json
